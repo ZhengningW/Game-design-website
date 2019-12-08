@@ -1,2 +1,2 @@
-# Game-design-website
-Senior Project
+# game website
+ senior project
