@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Game Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+	  body {font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;}
+    
+	  h1{
+    text-align: center;
+    color: #06F4DE;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	  }
+  h2,h3,h4 {
+    margin-top: 36px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0px;
+    letter-spacing: 10px;
+    font-size: 60px;
+    color: #04E6EF;
+    font-weight: 100;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    text-shadow: 10px 0px 16px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+	  p{
+    width: 95%;
+    color: #07F3EC;
+    text-align: center;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-size: 23px;
+    font-variant: normal;
+    font-weight: lighter;
+    height: auto;
+	  }
+	  
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.5;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(10%);  
+    width: 100%; 
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+	 
+	  
+
+	  
+
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {
+    font-style: italic;
+    color: #FFFFFF;
+    font-weight: 100;
+    margin-top: 175px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    font-size: 25px;
+}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 50px;
+    width: auto;
+  }
+  .thumbnail p {
+    margin-top: 1px;
+    color: #555;
+    text-shadow: 0px 0px 0px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+    border-radius: 30px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  
+  .navbar {
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 13px !important;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    -webkit-box-shadow: 3px 4px 17px;
+    box-shadow: 3px 4px 17px;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: lightblue!important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: lightseagreen!important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: lightblue !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+/*light box*/
+	  .row > .column {
+    padding-top: 0px;
+    padding-right: 111px;
+    padding-left: 111px;
+    padding-bottom: 111px;
+    margin-right: -6px;
+    margin-bottom: -6px;
+    margin-left: -6px;
+    margin-top: 20px;
+    float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+	  
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 37px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev{cursor: pointer;
+	
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 1.5s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;}
+.next {
+  cursor: pointer;
+	
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 1.5s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+	  .prev {
+  left: 0;
+		  border-radius: 3px 0 0 3px;}
+
+
+.prev:hover{
+    background-color: aqua;
+    border-radius: 60px;
+}
+.next:hover {
+    background-color: aqua;
+    border-radius: 60px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* end light box*/	  
+  </style>
+</head>
+<body id="Main" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: black">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     <a class="navbar-brand" style="background-color: grey;"><img src="imgs/logo.png" alt="logo" style="width: 200px; margin-top: -14px; padding-right: 0px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: grey; color: #03F8F7; text-transform: capitalize; -webkit-box-shadow: 2px 3px 36px; box-shadow: 2px 3px 36px; width: 101%; padding-right: 13px;">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a data-toggle="modal" data-target="#Main" onclick="window.location.href='index.html'">Home</a></li>
+         <li><a data-toggle="modal" data-target="#Concept" onclick="window.location.href='concept.html'">Concept</a></li>
+        <li><a data-toggle="modal" data-target="#Character" onclick="window.location.href='character.html'">Character</a></li>
+        <li><a data-toggle="modal" data-target="#Art" onclick="window.location.href='art.html'">Art</a></li>
+        <li><a data-toggle="modal" data-target="#Designs" onclick="window.location.href='designs.html'">Designs</a></li>
+        <li><a data-toggle="modal" data-target="#Background" onclick="window.location.href='background.html'">Background</a></li>
+		  <li><a data-toggle="modal" data-target="#Players" onclick="window.location.href='player.html'">Players</a></li>
+	    <li><a data-toggle="modal" data-target="#Team" onclick="window.location.href='team.html'">Team</a></li>
+      </ul>
+    </div>
+  </div>
+	</nav>
+<div id="Concept">
+	<div class="container">
+	  <h3>Game Concept</h3>
+	  <p class="text-center" style="margin-left: 38px; text-align: center;">We Make Excellent Games</p>
+	  <p class="text-justify" style="margin-top: 17px; margin-right: 17px; margin-bottom: 17px; margin-left: 17px; width: 100%; text-align: justify;"> &nbsp; &nbsp;When we are thinking about the game, we considered a lot. What could happen in space, out of the earth. Can we find other world to live? If we can, what we will see in there, and what we may see. Our world is not alone, and we need to explore the space. We want to have some interesting species in the game. In another different world, we can find more. Follow the characters, experience different world, and find new creatures. You will find that we are not alone. This is an advanture, and we are going to creat a real advanture for players. A lot of things happened.</p>
+	  <br>
+	</div>
+
+	<div class="row" style="align-items: center; width: 90%; margin-right: auto; margin-left: auto; margin-top: -97px;">
+		<h3>Concept drawing</h3>
+  <div class="column" style="margin-right: auto; margin-left: auto;">
+    <img src="imgs/img18.png" alt="design1" onclick="openModal();currentSlide(1)" class="hover-shadow" style="height: 200px; width: 200px;">
+  </div>
+  <div class="column">
+    <img src="imgs/img17.png" alt="design2" onclick="openModal();currentSlide(2)" class="hover-shadow" style="height: 200px; width: 200px;">
+  </div>
+  <div class="column">
+    <img src="imgs/img16.png" alt="design3" onclick="openModal();currentSlide(3)" class="hover-shadow" style="height: 200px; width: 200px;">
+  </div>
+  <div class="column">
+    <img src="imgs/img15.png" alt="design4" onclick="openModal();currentSlide(4)" class="hover-shadow" style="height: 200px; width: 200px;">
+  </div>
+</div>
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="imgs/img18.png" alt="design1" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="imgs/img17.png" alt="design2" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="imgs/img16.png" alt="design3" style="width: 100%; margin-top: -4px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="imgs/img15.png" alt="design4" style="width: 100%;">
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+  
+    <div class="column">
+      <img class="demo" src="imgs/img18.png" onclick="currentSlide(1)" alt="Design1" style="height: 200px; width: 200px;">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="imgs/img17.png" onclick="currentSlide(2)" alt="Design2" style="height: 200px; width: 200px;">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="imgs/img16.png" onclick="currentSlide(3)" alt="Design3" style="height: 200px; width: 200px;">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="imgs/img15.png" onclick="currentSlide(4)" alt="Design4" style="height: 200px; width: 200px;">
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<script>
+$(document).ready(function(){
+ 
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+ 
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+ 
+    if (this.hash !== "") {
+
+      
+      event.preventDefault();
+
+    
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+
+	
+	
+//light box	
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}	
+	//end light box
+</script>
+
+</body>
+</html>
