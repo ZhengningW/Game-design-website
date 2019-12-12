@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Game Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+	  
+    body {font: 400 15px/1.8 Lato, sans-serif;
+		  background-color: black;
+		  height: 100%;
+		  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    color: #777;}
+    
+  
+  h2,h3,h4 {
+	  font-size:7vw;
+    margin-top: 40px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+    letter-spacing: 10px;
+    font-size: 60px;
+    color: #07F6D9;
+    font-weight: 100;
+    font-family: 'Cormorant Garamond', serif;
+    padding-top: 18px;
+    text-shadow: 10px 0px 16px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+	  p{
+    font-size:1vw;
+    color: #08F5E7;
+    margin-top: 4px;
+    margin-bottom: 123px;
+    text-align: left;
+    float: right;
+    width: 59%;
+    text-shadow: 0px -3px 9px;
+    height: 204px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-right: 128px;
+    margin-left: 215px;
+	  }
+	  
+	
+ 
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 50px;
+    width: auto;
+  }
+  .thumbnail p {
+    margin-top: 1px;
+    color: #555;
+    text-shadow: 0px 0px 0px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #02F3FB !important;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-right: 19px;
+    padding-bottom: 19px;
+    padding-left: 19px;
+    border-radius: 82px;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0px 0px 11px;
+    box-shadow: 0px 0px 11px;
+    margin-top: -437px;
+    top: 0px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+    border-radius: 30px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  .navbar {
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 13px !important;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    -webkit-box-shadow: 3px 4px 17px;
+    box-shadow: 3px 4px 17px;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: lightblue!important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: lightseagreen!important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: lightblue !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+	  
+
+.parent {
+
+    float: left;
+    
+    background: -webkit-linear-gradient(#ffffff, #f2f7fb);
+
+    background: -o-linear-gradient(#ffffff, #f2f7fb);
+ 
+    background: -moz-linear-gradient(#ffffff, #f2f7fb);
+
+    background: linear-gradient(#ffffff, #f2f7fb);
+
+   
+}
+.div img {
+    margin-top: 21px;
+    margin-right: 21px;
+    margin-left: 21px;
+    margin-bottom: 21px;
+    width: 300px;
+}
+hr {
+    clear: both;
+    margin: 0;
+    border-color: aqua;
+    height: 114px;
+}
+
+
+	 
+
+
+
+	  
+	  
+  </style>
+</head>
+<body id="Main" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+       <a class="navbar-brand" style="background-color: grey;"><img src="imgs/logo.png" alt="logo" style="width: 200px; padding-right: 0px; float: none; margin-top: -14px; margin-left: 0px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: grey; color: #03F8F7; text-transform: capitalize; -webkit-box-shadow: 2px 3px 36px; box-shadow: 2px 3px 36px; width: 101%; padding-right: 13px;">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a data-toggle="modal" data-target="#Main" onclick="window.location.href='index.html'">Home</a></li>
+         <li><a data-toggle="modal" data-target="#Concept" onclick="window.location.href='concept.html'">Concept</a></li>
+        <li><a data-toggle="modal" data-target="#Character" onclick="window.location.href='character.html'">Character</a></li>
+        <li><a data-toggle="modal" data-target="#Art" onclick="window.location.href='art.html'">Art</a></li>
+        <li><a data-toggle="modal" data-target="#Designs" onclick="window.location.href='designs.html'">Designs</a></li>
+        <li><a data-toggle="modal" data-target="#Background" onclick="window.location.href='background.html'">Background</a></li>
+		  <li><a data-toggle="modal" data-target="#Players" onclick="window.location.href='player.html'">Players</a></li>
+	    <li><a data-toggle="modal" data-target="#Team" onclick="window.location.href='team.html'">Team</a></li>
+      </ul>
+    </div>
+  </div></nav>
+
+<!-- Character Page -->
+	<div id="Character">
+		<h3>Characters</h3>
+<hr>
+    <img alt="Captain" src="imgs/captain.png" style="width: 329px; margin-top: -83px; margin-right: 22px; margin-bottom: 22px; margin-left: 22px;">
+		<h4>Captain Carlos</h4>
+		<p> &nbsp; &nbsp; &nbsp; &nbsp; Carlos is the captain of Karat. He is strict to his crew, but also frendly to his crew. HE spent 30 years in Karat, he made contributes to the ship, which make him to become the most resepected person in the ship </p>
+<hr>
+
+
+    <img alt="Doctor" src="imgs/casi.png" style="width: 329px; margin-top: -83px; margin-right: 22px; margin-bottom: 22px; margin-left: 22px;">
+	  <h4>Doctor Casi</h4>
+	  <p> &nbsp; &nbsp; &nbsp; &nbsp; As a scientist in the flet, Casi has a lot of research experience.She has worked for the fleet for 10 years, and experienced a lot of places. She join the fleet when she was 21 years old, and she was an excellent student in Academic of Space research.Her experience is the biggest treasure for her. She like travel, and always interesting in new staff.</p>
+	 
+
+
+<hr>
+    <img alt="Hammer" src="imgs/hammer.png" style="width: 329px; margin-top: -83px; margin-right: 22px; margin-bottom: 22px; margin-left: 22px;">
+	  <h4>Hammer</h4>
+	  <p> &nbsp; &nbsp; &nbsp; &nbsp; Hammer is not a very friendlt guy. Mostly is because of his work. He is the cheif Engineer in Karat. So he never get too close with other crew, because he want to focus on engin jobs, which is imprortant for the space ship. He also believe that closely relationship with othe crews may bring effect to his work. He has to strick with anything, so he can make sure everything is running well. 
+		</p>
+
+<hr>
+    <img alt="Lizard" src="imgs/lizard.png" style="width: 329px; margin-top: -83px; margin-right: 22px; margin-bottom: 22px; margin-left: 22px;">
+	  <h4>Lizard</h4>
+	  <p> &nbsp; &nbsp; &nbsp; &nbsp;Lizard was abonded in deep space, and wondering in space for a long time. Captain Carlos saved him, and gave him a meaning to stay alive. For him, the carptain is everything. He us his life to protect the captain and his ship. Different with his face, he is an honest alien in the ship. </p>
+
+
+<hr>
+    <img alt="Volt" src="imgs/Volt.png" style="width: 329px; margin-top: -83px; margin-right: 22px; margin-bottom: 22px; margin-left: 22px;">
+		<h4>Volt</h4>
+		<p> &nbsp; &nbsp; &nbsp; &nbsp; Volt is an excellent warrior. He si the captain of defend team on ship. He is smart and brave. He and his team has protected this ship for 7 years. For him, this ship is not just a working station, this ship is his home. Crews trusted him. People says that he is the top protector of this ship.</p>
+<hr>
+
+	</div>
+
+<script>
+$(document).ready(function(){
+ 
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+ 
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+ 
+    if (this.hash !== "") {
+
+      
+      event.preventDefault();
+
+    
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+
+	
+</script>
+
+</body>
+</html>

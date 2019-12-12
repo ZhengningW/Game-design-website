@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Game Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+	  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    margin-top: 26px;
+    padding-top: 0px;
+}
+    
+	  team{
+		  position: fixed;
+	  }
+  h2,h3,h4 {
+    margin-top: 23px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+    font-size: 60px;
+    color: #00FBD0;
+    font-weight: 100;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    padding-top: 16px;
+    text-transform: uppercase;
+    text-shadow: 10px 0px 16px;
+  }
+	  p{
+    color: #22DDDC;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 14px;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-size: 22px;
+	  }
+	  
+  
+	 
+
+ 
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 50px;
+    width: auto;
+  }
+  .thumbnail p {
+    margin-top: 1px;
+    color: #555;
+    text-shadow: 0px 0px 0px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+    border-radius: 30px;
+  }
+  .nav-tabs li a {
+    color: blue;
+  }
+  
+  .navbar {
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 13px !important;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    -webkit-box-shadow: 3px 4px 17px;
+    box-shadow: 3px 4px 17px;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: lightblue!important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: lightseagreen!important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+	  
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+	  width: 100%;
+    color: #fff;
+    background-color: grey !important;
+  }
+  .dropdown-menu li a {
+    color: lightblue !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+    margin-top: 0px;
+  }
+  
+  </style>
+</head>
+<body id="Main" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: black; padding-top: 0px; color: #03F2CB; text-shadow: 10px 0px 16px;">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+       <a class="navbar-brand" style="background-color: grey;"><img src="imgs/logo.png" alt="logo" style="width: 200px; margin-top: -14px; padding-right: 0px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: grey; color: #03F8F7; text-transform: capitalize; -webkit-box-shadow: 2px 3px 36px; box-shadow: 2px 3px 36px; width: 101%; padding-top: 0px; padding-right: 13px;">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a data-toggle="modal" data-target="#Main" onclick="window.location.href='index.html'">Home</a></li>
+         <li><a data-toggle="modal" data-target="#Concept" onclick="window.location.href='concept.html'">Concept</a></li>
+        <li><a data-toggle="modal" data-target="#Character" onclick="window.location.href='character.html'">Character</a></li>
+        <li><a data-toggle="modal" data-target="#Art" onclick="window.location.href='art.html'">Art</a></li>
+        <li><a data-toggle="modal" data-target="#Designs" onclick="window.location.href='designs.html'">Designs</a></li>
+        <li><a data-toggle="modal" data-target="#Background" onclick="window.location.href='background.html'">Background</a></li>
+		  <li><a data-toggle="modal" data-target="#Players" onclick="window.location.href='player.html'">Players</a></li>
+	    <li><a data-toggle="modal" data-target="#Team" onclick="window.location.href='team.html'">Team</a></li>
+      </ul>
+    </div>
+  </div></nav>
+
+
+
+<div id="Team" class="container text-center">
+  <h2>The Team</h2>
+  <p><em>We Make Excellent Games</em></p>
+  
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Devlpoer1</strong></p>
+      <br>
+      <a href="#demo" data-toggle="collapse">
+      <img src="imgs/p1.jpeg" class="person img-rounded" alt="Developer1" width="200" height="200">
+      </a>
+        
+        <p>Developer one</p>
+        
+     
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Devloper2</strong></p>
+      <br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="imgs/p2.jpeg" class="person img-rounded" alt="Random Name" width="200" height="200">
+      </a>
+    
+        
+        <p>Devloper Two</p>
+        
+
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Devloper3</strong></p>
+      <br>
+      <a href="#demo3" data-toggle="collapse">
+      <img src="imgs/p3.jpeg" class="person img-rounded" alt="Random Name" width="200" height="200" >
+      </a>
+      
+        
+        <p>Devloper Three</p>
+        
+      
+    </div>
+  </div>
+	</div>
+	<!--End of Team Page-->
+	<div class="row">
+    <div class="col-md-4">
+      <p>Do you like teh web.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>San Francisco, CA</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 123456789</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+    </div>
+    <div class="col-md-8 col-lg-7">
+      <div class="row">
+        <div class="col-sm-6 form-group col-lg-7">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group col-lg-5">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit" style="background-color: aqua; color: #0FF500;">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+$(document).ready(function(){
+ 
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+ 
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+ 
+    if (this.hash !== "") {
+
+      
+      event.preventDefault();
+
+    
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+/
+</script>
+
+</body>
+</html>
